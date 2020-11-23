@@ -38,6 +38,7 @@ h3.innerHTML = `${day}, ${month} ${date} ${year}`;
 // Main temperature
 
 function displayMainTemp(response) {
+  console.log(response.data);
   let location = document.querySelector("#location");  
   let mainTemp = document.querySelector("#number");
   let description = document.querySelector("#description");

@@ -44,8 +44,8 @@ a {
 }
 
 .header {
-  background-image: url("../images/Montreal-Skyline.jpg");
-  background-size: cover;
+  background-image: url("../images/weather.jpg");
+  /* background-size: cover; */
   border: 1px solid #e3e5e8;
   border-radius: 5px;
   box-shadow: 5px 5px 5px 0px rgba(81, 81, 81, 0.1);

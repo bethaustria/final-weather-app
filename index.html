@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&family=Raleway&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css">
+    
+    <script src="https://kit.fontawesome.com/f78a08547b.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class=background>
+        <div class="header">
+            <h1>MONTREAL</h1>
+            <h3 id="date-header">Saturday, October 17 2020</h3>
+            
+            <!--Current Temp-->
+            <div class="weather">
+                <div class="row">
+                    <div class="col-2 offset-4">
+                        <p class="temp">
+                            <img src="https://img.icons8.com/color/64/000000/sun.png" />
+                            <span id="number">12</span><span class="units" id="unit">°C | °F</span></p>
+                    </div>
+
+                    <div class="col-2">
+                        <p class="prec">
+                            Precipitation: 0%
+                        </p>
+                        <p class="wind">
+                            Wind: 5 km/h
+                        </p>
+                    </div>                    
+                </div>
+            </div>
+                <span class="currentCity">
+                    <button type="button" class="btn btn-success" id = "current">Current City</button>
+                </span>
+        </div>
+
+        <!--5 Day Forecast-->
+        <div class="forecast">
+            <h4>5 Day Weather Forecast</h4>
+            <div class="five">
+                <div class="row">                        
+                    <div class="col-2-days">
+                        <h5>Sun</h5>                        
+                        <p class="icons">
+                            <img src="https://img.icons8.com/color/64/000000/partly-cloudy-day.png" />
+                        </p>
+                        <p class="temp-2"><strong>15°</strong> 11°</p>
+                    </div>
+                    <div class="col-2-days">
+                        <h5>Mon</h5>
+                            <p class="icons">
+                                <img src="https://img.icons8.com/color/64/000000/rain.png" />
+                            </p>
+                            <p class="temp-2"><strong>12°</strong> 8°</p>
+                    </div>
+                    <div class="col-2-days">
+                        <h5>Tue</h5>
+                            <p class="icons">
+                                <img src="https://img.icons8.com/color/64/000000/rain.png" />
+                            </p>
+                            <p class="temp-2"><strong>10°</strong> 5°</p>
+                    </div>
+                    <div class="col-2-days">
+                        <h5>Wed</h5>
+                            <p class="icons">
+                                <img src="https://img.icons8.com/color/64/000000/rain.png" />
+                            </p>
+                            <p class="temp-2"><strong>15°</strong> 7°</p>
+                    </div>
+                    <div class="col-2-days">
+                        <h5>Thu</h5>
+                            <p class="icons">
+                                <img src="https://img.icons8.com/color/64/000000/partly-cloudy-day.png" />
+                            </p>
+                            <p class="temp-2"><strong>11°</strong> 7°</p>
+                    </div>
+                </div>
+            </div>     
+        </div>
+    
+            <!--Search Bar-->
+        <form id=form-search>
+            <div class="form-row align-items-center">
+                <div class="col-auto offset-4">                
+                    <input type="text" class="form-control mb-2" id="inline-form-input" placeholder="Enter a city">
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-2" id="button-search">Search</button>
+                </div>
+                <!-- <div>
+                    <button class="btn btn-primary mb-2" id="celsius">C°</button>
+                    <button class="btn btn-primary mb-2" id="fahrenheit">F°</button>                    
+                </div> -->
+            </div>
+        </form>
+    </div>
+    <a href="https://github.com/bethaustria/Index">My GitHub</a>
+    <script src="src/script.js"></script>
+</body>
+</html>

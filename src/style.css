@@ -1,0 +1,118 @@
+h1 {
+  margin-top: 40px;
+}
+
+h4 {
+  color: #515151;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+h5 {
+  color: #515151;
+  font-family: "Raleway", sans-serif;
+  margin-top: 15px;
+  padding: 25px 20px;
+}
+
+strong {
+  color: #515151;
+}
+
+form {
+  margin-top: 25px;
+  padding-bottom: 25px;
+}
+
+a {
+  display: block;
+  font-size: 14px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.background {
+  background-color: #f4f2f2;
+  border: 1px solid #e3e5e8;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 0px rgba(81, 81, 81, 0.1);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0 auto;
+  margin-top: 5%;
+  width: 50%;
+}
+
+.header {
+  background-image: url("../images/Montreal-Skyline.jpg");
+  background-size: cover;
+  border: 1px solid #e3e5e8;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 0px rgba(81, 81, 81, 0.1);
+  color: #fff;
+  margin-bottom: 25px;
+  opacity: 100%;
+  text-align: center;
+}
+
+.temp {
+  font-size: 50px;
+  font-weight: 500;
+  margin-left: -70px;
+  width: 250px;
+}
+
+.prec {
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  padding-top: 10%;
+  padding-left: 10%;
+  text-align: left;
+  width: 200%;
+}
+
+.wind {
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  line-height: 0%;
+  padding-left: 10%;
+  text-align: left;
+  width: 150%;
+}
+
+.forecast {
+  text-align: center;
+}
+
+.five {
+  margin-left: 150px;
+  text-align: center;
+}
+
+.icons {
+  font-size: 50px;
+}
+
+.temp-2 {
+  color: #bcbcbc;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  line-height: 35px;
+}
+
+.col-2-days {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  box-shadow: 5px 5px 5px 0px rgba(81, 81, 81, 0.1);
+  margin-right: 25px;
+  padding: 5px 20px 5px 20px;
+}
+
+.btn-success {
+  margin-bottom: 20px;
+}
+
+.units {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}

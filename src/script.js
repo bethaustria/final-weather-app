@@ -42,11 +42,14 @@ function displayMainTemp(response) {
   let location = document.querySelector("#location");  
   let mainTemp = document.querySelector("#number");
   let description = document.querySelector("#description");
+  let humidity = document.querySelector("#humidity");
+  let wind = document.querySelector("#wind");
 
   mainTemp.innerHTML = Math.round(response.data.main.temp);
   location.innerHTML = response.data.name;
   description.innerHTML = response.data.weather[0].description;
-
+  humidity.innerHTML = `${response.data.main.humidity}%`;
+  wind.innerHTML = `${Math.round(response.data.wind.speed)} km/h`;
 }
 
   let urlKey = "f84459d8b368cc9cea9d316305ee8ff2";

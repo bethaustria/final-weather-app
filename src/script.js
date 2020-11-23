@@ -35,6 +35,8 @@ let month = months[now.getMonth()];
 
 h3.innerHTML = `${day}, ${month} ${date} ${year}`;
 
+
+
 // Main date & temperature
 
 function formatDate(timestamp) {
@@ -45,7 +47,6 @@ function formatDate(timestamp) {
 }
 
 function displayMainInfo(response) {
-  console.log(response.data);
   let location = document.querySelector("#location");  
   let mainTemp = document.querySelector("#number");
   let description = document.querySelector("#description");
@@ -63,6 +64,14 @@ function displayMainInfo(response) {
   icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
+function clickSub(event) {
+
+  
+
+  event.preventDefault();
+  let searchInput = document.querySelector("#inline-form-input");
+  console.log("hello", searchInput);
+
   let city = "Montreal";
   let urlKey = "f84459d8b368cc9cea9d316305ee8ff2";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${urlKey}&units=metric`;
@@ -71,21 +80,20 @@ function displayMainInfo(response) {
 
 
 
-
-
-
-
-
-
 // Search Engine & Weather API
+ 
+let form = document.querySelector("#form-search");
+form.addEventListener("submit", clickSub);
 
-// function clickSub(event) {
 
-  
 
-//   event.preventDefault();
-//   let searchInput = document.querySelector("#inline-form-input");
-//   console.log("hello", searchInput);
+
+
+
+
+
+
+
 
 //   let city = document.querySelector("#inline-form-input");
 //   let urlKey = "f84459d8b368cc9cea9d316305ee8ff2";
@@ -97,8 +105,7 @@ function displayMainInfo(response) {
 //   h1.innerHTML = `${searchInput.value.toUpperCase()}`;
 // }
 
-// let form = document.querySelector("#form-search");
-// form.addEventListener("submit", clickSub);
+
 
 // function cityTemp(response) {
 //   let roundedTemp = Math.round(response.data.main.temp);

@@ -42,7 +42,13 @@ h3.innerHTML = `${day}, ${month} ${date} ${year}`;
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
   let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
   return `${hours}:${minutes}`;
 }
 
@@ -64,17 +70,35 @@ function displayMainInfo(response) {
   icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+    return `${hours}:${minutes}`;
+}
+
 function displayForecast(response) {
   let forecastElement = document.querySelector("#showForecast");
   let forecast = response.data.list[0];
 
   forecastElement.innerHTML = `
     <div class="col-2-days">
-    <h5>12:00</h5>                        
-    <p class="icons">
-    <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" />
-    </p>
-    <p class="temp-2"><strong>${Math.round(forecast.main.temp_max)}°</strong> &nbsp ${Math.round(forecast.main.temp_min)}°</p>
+      <h5>
+        ${formatHours(forecast.dt * 1000)}
+     </h5>                        
+      <p class="icons">
+        <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" />
+      </p>
+      <p class="temp-2">
+        <strong>${Math.round(forecast.main.temp_max)}°</strong> 
+        &nbsp ${Math.round(forecast.main.temp_min)}°
+      </p>
     </div>`;
   console.log(response.data);
 }

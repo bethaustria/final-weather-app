@@ -108,8 +108,6 @@ function changeF(event) {
   let fahrenheitTemperature = Math.round((varInt * 9) / 5 + 32);
   numberTemp.innerHTML = `${fahrenheitTemperature}`;
 
-  let unit = document.querySelector("#unit");
-  unit.innerHTML = "F";
 }
 
 let fahrenheit = document.querySelector("#fahrenheit");
@@ -125,9 +123,7 @@ function changeC(event) {
   let celsiusTemperature = Math.round(((varInt - 32) * 5) / 9);
   numberTemp.innerHTML = `${celsiusTemperature}`;
 
-  let unit = document.querySelector("#unit");
-  unit.innerHTML = "C";
 }
 
-// let celsius = document.querySelector("#celsius");
-// celsius.addEventListener("click", changeC);
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", changeC);

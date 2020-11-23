@@ -40,8 +40,11 @@ h3.innerHTML = `${day}, ${month} ${date} ${year}`;
 function displayMainTemp(response) {
   let location = document.querySelector("#location");  
   let mainTemp = document.querySelector("#number");
+  let description = document.querySelector("#description");
+
   mainTemp.innerHTML = Math.round(response.data.main.temp);
   location.innerHTML = response.data.name;
+  description.innerHTML = response.data.weather[0].description;
 
 }
 
@@ -49,6 +52,7 @@ function displayMainTemp(response) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Montreal&appid=${urlKey}&units=metric`;
 
   axios.get(apiUrl).then(displayMainTemp);
+
 // Search Engine & Weather API
 
 // function clickSub(event) {

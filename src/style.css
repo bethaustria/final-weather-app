@@ -113,7 +113,7 @@ a {
 }
 
 .units {
-  display: block;
+  display: inline-block;
   font-family: Arial, sans-serif;
   font-size: 15px;
 }

@@ -129,5 +129,5 @@ function changeC(event) {
   unit.innerHTML = "C";
 }
 
-let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", changeC);
+// let celsius = document.querySelector("#celsius");
+// celsius.addEventListener("click", changeC);

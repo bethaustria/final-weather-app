@@ -33,6 +33,10 @@ a {
   text-align: center;
 }
 
+ul {
+  margin-top: 20px;
+}
+
 li{
   font-size: 16px;
   font-family: "Raleway", sans-serif;

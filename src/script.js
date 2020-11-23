@@ -64,21 +64,21 @@ function displayMainInfo(response) {
   icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
-function clickSub(event) {
-
-  
-
-  event.preventDefault();
-  let searchInput = document.querySelector("#inline-form-input");
-  console.log("hello", searchInput);
-
-  let city = "Montreal";
+function search(city) {
   let urlKey = "f84459d8b368cc9cea9d316305ee8ff2";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${urlKey}&units=metric`;
 
   axios.get(apiUrl).then(displayMainInfo);
+}
 
+function clickSub(event) { 
+  event.preventDefault();
+  let searchInput = document.querySelector("#inline-form-input");
+  search(searchInput.value);
+  console.log("hello", searchInput.value);
+}
 
+search("Montreal");
 
 // Search Engine & Weather API
  
@@ -94,12 +94,6 @@ form.addEventListener("submit", clickSub);
 
 
 
-
-//   let city = document.querySelector("#inline-form-input");
-//   let urlKey = "f84459d8b368cc9cea9d316305ee8ff2";
-//   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${urlKey}&units=metric`;
-
-//   axios.get(apiUrl).then(cityTemp);
 
 //   let h1 = document.querySelector("h1");
 //   h1.innerHTML = `${searchInput.value.toUpperCase()}`;

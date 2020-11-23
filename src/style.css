@@ -13,6 +13,8 @@ h4 {
 h5 {
   color: #515151;
   font-family: "Raleway", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
   margin-top: 15px;
   padding: 25px 20px;
 }
@@ -116,7 +118,7 @@ li:first-letter {
   padding: 5px 20px 5px 20px;
 }
 
-.units {
+.units {  
   font-family: Arial, sans-serif;
   font-size: 15px;
   left: -10px;

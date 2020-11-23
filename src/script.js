@@ -85,82 +85,25 @@ function formatHours(timestamp) {
 
 function displayForecast(response) {
   let forecastElement = document.querySelector("#showForecast");
-  let forecast = response.data.list[0];
+  forecastElement.innerHTML = null;
+  let forecast = null;
 
-  forecastElement.innerHTML = `
-    <div class="col-2-days">
-      <h5>
-        ${formatHours(forecast.dt * 1000)}
-     </h5>                        
-      <p class="icons">
-        <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" />
-      </p>
-      <p class="temp-2">
-        <strong>${Math.round(forecast.main.temp_max)}°</strong> 
-        &nbsp ${Math.round(forecast.main.temp_min)}°
-      </p>
-    </div>`;
-
-    forecast = response.data.list[1];
-      forecastElement.innerHTML += `
-        <div class="col-2-days">
-          <h5>
-            ${formatHours(forecast.dt * 1000)}
-          </h5>                        
-          <p class="icons">
-            <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" />
-          </p>
-            <p class="temp-2">
-            <strong>${Math.round(forecast.main.temp_max)}°</strong> 
-            &nbsp ${Math.round(forecast.main.temp_min)}°
-          </p>
-    </div>`;
-
-    forecast = response.data.list[2];
-      forecastElement.innerHTML += `
-        <div class="col-2-days">
-          <h5>
-            ${formatHours(forecast.dt * 1000)}
-          </h5>                        
-          <p class="icons">
-            <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" />
-          </p>
-            <p class="temp-2">
-            <strong>${Math.round(forecast.main.temp_max)}°</strong> 
-            &nbsp ${Math.round(forecast.main.temp_min)}°
-          </p>
-    </div>`;
-
-    forecast = response.data.list[3];
-      forecastElement.innerHTML += `
-        <div class="col-2-days">
-          <h5>
-            ${formatHours(forecast.dt * 1000)}
-          </h5>                        
-          <p class="icons">
-            <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" />
-          </p>
-            <p class="temp-2">
-            <strong>${Math.round(forecast.main.temp_max)}°</strong> 
-            &nbsp ${Math.round(forecast.main.temp_min)}°
-          </p>
-    </div>`;
-
-    forecast = response.data.list[4];
-      forecastElement.innerHTML += `
-        <div class="col-2-days">
-          <h5>
-            ${formatHours(forecast.dt * 1000)}
-          </h5>                        
-          <p class="icons">
-            <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" />
-          </p>
-            <p class="temp-2">
-            <strong>${Math.round(forecast.main.temp_max)}°</strong> 
-            &nbsp ${Math.round(forecast.main.temp_min)}°
-          </p>
-    </div>`;
-  
+  for (let index = 0; index < 5; index++) {
+    let forecast = response.data.list[index];
+    forecastElement.innerHTML += `
+      <div class="col-2-days">
+        <h5>
+          ${formatHours(forecast.dt * 1000)}
+       </h5>                        
+        <p class="icons">
+          <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" />
+        </p>
+        <p class="temp-2">
+          <strong>${Math.round(forecast.main.temp_max)}°</strong> 
+          &nbsp ${Math.round(forecast.main.temp_min)}°
+        </p>
+      </div>`; 
+  }
 }
 
 function search(city) {

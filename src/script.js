@@ -45,12 +45,14 @@ function formatDate(timestamp) {
 }
 
 function displayMainInfo(response) {
+  console.log(response.data);
   let location = document.querySelector("#location");  
   let mainTemp = document.querySelector("#number");
   let description = document.querySelector("#description");
   let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#wind");
   let time = document.querySelector("#time");
+  let icon = document.querySelector("#icon");
 
   mainTemp.innerHTML = Math.round(response.data.main.temp);
   location.innerHTML = response.data.name;
@@ -58,12 +60,22 @@ function displayMainInfo(response) {
   humidity.innerHTML = `${response.data.main.humidity}%`;
   wind.innerHTML = `${Math.round(response.data.wind.speed)} km/h`;
   time.innerHTML = formatDate(response.data.dt * 1000);
+  icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
+  let city = "Montreal";
   let urlKey = "f84459d8b368cc9cea9d316305ee8ff2";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Montreal&appid=${urlKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${urlKey}&units=metric`;
 
   axios.get(apiUrl).then(displayMainInfo);
+
+
+
+
+
+
+
+
 
 // Search Engine & Weather API
 

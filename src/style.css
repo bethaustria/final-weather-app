@@ -112,8 +112,9 @@ a {
 }
 
 .units {
-  position: relative;
   font-family: Arial, sans-serif;
   font-size: 15px;
+  left: -10px;
+  position: relative;
   top: -25px;
 }

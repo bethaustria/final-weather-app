@@ -104,14 +104,14 @@ li:first-letter {
 }
 
 .temp-2 {
-  color: #bcbcbc;
+  color: #faf9f9;
   font-family: Arial, sans-serif;
   font-size: 20px;
   line-height: 35px;
 }
 
 .col-2-days {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #6DCCE2;
   border-radius: 3px;
   box-shadow: 5px 5px 5px 0px rgba(81, 81, 81, 0.1);
   margin-right: 25px;

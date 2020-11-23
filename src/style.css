@@ -68,6 +68,11 @@ li:first-letter {
   text-align: center;
 }
 
+.hour {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 25px;
+}
+
 .temp {
   font-size: 50px;
   font-weight: 500;

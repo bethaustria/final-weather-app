@@ -71,6 +71,8 @@ li:first-letter {
 .hour {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 25px;
+  line-height: 1;
+  margin-bottom: 1.5%;
 }
 
 .temp {

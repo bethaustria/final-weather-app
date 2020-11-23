@@ -45,7 +45,6 @@ function formatDate(timestamp) {
 }
 
 function displayMainInfo(response) {
-  console.log(response.data);
   let location = document.querySelector("#location");  
   let mainTemp = document.querySelector("#number");
   let description = document.querySelector("#description");

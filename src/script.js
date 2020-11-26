@@ -131,6 +131,9 @@ function clickSub(event) {
 function changeToFahrenheit(event){
   event.preventDefault();  
   let numberTemp = document.querySelector("#number");
+  //remove the active class from the celsius link
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   numberTemp.innerHTML = Math.round(fahrenheitTemperature);
 }
@@ -138,7 +141,9 @@ function changeToFahrenheit(event){
 // Fahrenheit to Celsius
 
 function changeToCelsius(event){
-  event.preventDefault();  
+  event.preventDefault();
+  celsius.classList.add("active");
+  fahrenheit.classList.remove("active");  
   let numberTemp = document.querySelector("#number");  
   numberTemp.innerHTML = Math.round(celsiusTemperature);
 }  
@@ -162,15 +167,5 @@ celsius.addEventListener("click", changeToCelsius);
 
   
   search("Montreal");
-  
-  // function changeC(event) {
-    //   event.preventDefault();
-    //   let numberTemp = document.querySelector("#number");
-    //   let varInt = parseInt(numberTemp.textContent);
-
-//   let celsiusTemperature = Math.round(((varInt - 32) * 5) / 9);
-//   numberTemp.innerHTML = `${celsiusTemperature}`;
-
-// }
 
 

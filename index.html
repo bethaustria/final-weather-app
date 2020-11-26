@@ -27,16 +27,16 @@
             <div class="weather">
                 <div class="row">
                     <div class="col-2 offset-4">
-                        <p class="temp">
+                        <div class="temp">
                             <img src="https://img.icons8.com/color/64/000000/sun.png"
                             id="icon" 
                             alt="weather icon"/>
-                            <span id="number">12</span>
-                            <span class="units" id="unit" role="button">
-                                <span id="celsius" >°C</span> | 
-                                <span id="fahrenheit">°F</span>
+                            <strong class="mainTemp" id="number">12</strong>
+                            <span class="units">
+                                <a href="#" class="active" id="celsius" >°C</a> | 
+                                <a href="#" id="fahrenheit">°F</a>
                             </span>
-                        </p>
+                        </div>   
                     </div>
 
                     <ul class="col-2">
@@ -76,7 +76,7 @@
             </div>
         </form>
     </div>
-    <a href="https://github.com/bethaustria/final-weather-app">My GitHub</a>
+    <a class="code" href="https://github.com/bethaustria/final-weather-app">GitHub</a>
     <script src="src/script.js"></script>
 </body>
 </html>

@@ -129,7 +129,7 @@ function clickSub(event) {
 // Celsius to Fahrenheit
 
 function changeToFahrenheit(event){
-  event.preventDefault();
+  event.preventDefault();  
   let numberTemp = document.querySelector("#number");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   numberTemp.innerHTML = Math.round(fahrenheitTemperature);
@@ -138,7 +138,7 @@ function changeToFahrenheit(event){
 // Fahrenheit to Celsius
 
 function changeToCelsius(event){
-  event.preventDefault();
+  event.preventDefault();  
   let numberTemp = document.querySelector("#number");  
   numberTemp.innerHTML = Math.round(celsiusTemperature);
 }  

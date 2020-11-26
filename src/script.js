@@ -61,6 +61,8 @@ function displayMainInfo(response) {
   let time = document.querySelector("#time");
   let icon = document.querySelector("#icon");
 
+  celsiusTemperature = response.data.main.temp;
+
   mainTemp.innerHTML = Math.round(response.data.main.temp);
   location.innerHTML = response.data.name;
   description.innerHTML = response.data.weather[0].description;
@@ -123,64 +125,52 @@ function clickSub(event) {
   console.log("hello", searchInput.value);
 }
 
-search("Montreal");
-
-// Search Engine & Weather API
- 
-let form = document.querySelector("#form-search");
-form.addEventListener("submit", clickSub);
-
-
-
-
-
-
-
-
-
-
-
-//   let h1 = document.querySelector("h1");
-//   h1.innerHTML = `${searchInput.value.toUpperCase()}`;
-// }
-
-
-
-// function cityTemp(response) {
-//   let roundedTemp = Math.round(response.data.main.temp);
-//   let number = document.querySelector("#number");
-//   number.innerHTML = `${roundedTemp}`;
-
-
-
-// }
 
 // Celsius to Fahrenheit
 
-function changeF(event) {
+function changeToFahrenheit(event){
   event.preventDefault();
   let numberTemp = document.querySelector("#number");
-  let varInt = parseInt(numberTemp.textContent);
-
-  let fahrenheitTemperature = Math.round((varInt * 9) / 5 + 32);
-  numberTemp.innerHTML = `${fahrenheitTemperature}`;
-
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  numberTemp.innerHTML = Math.round(fahrenheitTemperature);
 }
-
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", changeF);
 
 // Fahrenheit to Celsius
 
-function changeC(event) {
+function changeToCelsius(event){
   event.preventDefault();
-  let numberTemp = document.querySelector("#number");
-  let varInt = parseInt(numberTemp.textContent);
+  let numberTemp = document.querySelector("#number");  
+  numberTemp.innerHTML = Math.round(celsiusTemperature);
+}  
 
-  let celsiusTemperature = Math.round(((varInt - 32) * 5) / 9);
-  numberTemp.innerHTML = `${celsiusTemperature}`;
+let celsiusTemperature = null;
 
-}
+
+// Search Engine & Weather API
+
+let form = document.querySelector("#form-search");
+form.addEventListener("submit", clickSub);
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", changeToFahrenheit);
 
 let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", changeC);
+celsius.addEventListener("click", changeToCelsius);
+
+
+
+
+  
+  search("Montreal");
+  
+  // function changeC(event) {
+    //   event.preventDefault();
+    //   let numberTemp = document.querySelector("#number");
+    //   let varInt = parseInt(numberTemp.textContent);
+
+//   let celsiusTemperature = Math.round(((varInt - 32) * 5) / 9);
+//   numberTemp.innerHTML = `${celsiusTemperature}`;
+
+// }
+
+
